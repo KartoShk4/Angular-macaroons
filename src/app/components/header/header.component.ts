@@ -7,6 +7,19 @@ import { Component} from '@angular/core';
 })
 export class HeaderComponent {
 
+  // Для мобильного меню (burger)
+  isBurger: boolean = false;
+
+  // Функция отображения мобильного меню (burger)
+  public showBurger(): void {
+    this.isBurger = !this.isBurger;
+  }
+
+  // Функция скрытия мобильного меню (burger)
+  public closeBurger(): void {
+    this.isBurger = false;
+  }
+
   // Номер телефона
   public showPhoneNumber: { phone: string }[] = [
     {
